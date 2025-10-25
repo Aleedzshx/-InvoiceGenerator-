@@ -23,7 +23,7 @@ InvoiceGenerator-Python/
 ├── pending_invoice.pdf         # Generated invoice (output)
 └── README.md                  # Project documentation
 
-
+
 
 🧪 How to Run
 
