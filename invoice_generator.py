@@ -1,29 +1,34 @@
-# Import necessary modules
+# Import necessary module
+s
 import jinja2                     # For rendering HTML templates
-import pdfkit                     # For converting HTML to PDF
+import pdfkit                     # For converting HTML+CSS to PDF
 import os                         # For handling file paths and directories
 from datetime import datetime     # For working with dates
 
 # === Client and Product Information ===
+
 client_name = "Hector Salamanca"
 
 # Product names
+
 item1 = "Dishwasher"
 item2 = "Coffee Maker"
 item3 = "Microwave"
 item4 = "Blender"
 
 # Individual prices
-subtotal1 = 89
-subtotal2 = 35
+
+subtotal1 = 120
+subtotal2 = 45
 subtotal3 = 50
 subtotal4 = 20
 
 # Calculate total price
+
 total = subtotal1 + subtotal2 + subtotal3 + subtotal4
 
 # Format current date and month
-month = datetime.today().strftime("%B, %Y")         # Example: October, 2025
+month = datetime.today().strftime("%b, %Y")         # Example: Oct, 2025
 today_date = datetime.today().strftime("%d %b, %Y") # Example: 21 Oct, 2025
 
 # === Context for the HTML template ===
@@ -79,5 +84,5 @@ pdfkit.from_string(output_text, output_pdf, configuration=config, css=css_path)
 
 # === Console Feedback ===
 print("✅ Invoice generated successfully!")
-print(f"📄 Saved as: {output_pdf}")
+print(f"📄 Saved as: {pending_invoice.pdf}")
 
