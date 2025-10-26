@@ -1,4 +1,4 @@
-# -InvoiceGenerator-Python---
+# -InvoiceGenerator-Python-
 
 
 📌 Description
