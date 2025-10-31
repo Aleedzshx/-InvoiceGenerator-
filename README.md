@@ -12,10 +12,11 @@ This project generates invoices in PDF format using Python, Jinja2, pdfkit, HTML
 - PDFKit
 - wkhtmltopdf
 - HTML5 & CSS3
+- PyCharm (IDE)
 
 **📂 Project Structure**
 
-InvoiceGenerator-Python/
+InvoiceGenerator-/
 │
 ├── invoice_generator.py       # Main Python script
 ├── contract_template.html     # HTML template with Jinja2 variables
@@ -31,14 +32,13 @@ InvoiceGenerator-Python/
 pip install jinja2 , pdfkit
 
 
-- Make sure wkhtmltopdf is installed and configured:
 - Download from wkhtmltopdf.org
 - Verify the executable path in invoice_generator.py
 - Run the script:
 python invoice_generator.py
 
 
-The script will generate a Payment.pdf file in the project directory.
+The script will generate an apending_invoice.pdf  file in the project directory.
 
 **🎨 Customization**
 
@@ -49,7 +49,7 @@ You can easily modify:
 
 **📸 Preview**
 
-(Add a screenshot of the generated PDF here)
+<img width="676" height="731" alt="image" src="https://github.com/user-attachments/assets/5a436407-dc36-4d38-934d-a8ce81c87ce7" />
 
 
 **📺 Inspiration**
@@ -63,4 +63,4 @@ This educational video inspired this project, adapted with a unique theme, custo
 - Connect to a shopping cart or database
 - Use as a foundation for university-level projects
 
-Let me know if you'd like help adding a preview image or creating a visual banner for your GitHub repo.
+Let me know if you'd like help adding a preview image.
