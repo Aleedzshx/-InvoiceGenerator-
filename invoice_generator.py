@@ -1,15 +1,17 @@
+#==================
 # Module
-s
+
 import jinja2                     # For rendering HTML templates
 import pdfkit                     # For converting HTML+CSS to PDF
 import os                         # For handling file paths and directories
 from datetime import datetime     # For working with dates
 
+#==================
 #  Client and Product's Information ------
 
 client_name = "Hector Salamanca"
 
-# Product 
+# Product
 
 item1 = "Dishwasher"
 item2 = "Coffee Maker"
@@ -31,38 +33,43 @@ total = subtotal1 + subtotal2 + subtotal3 + subtotal4
 month = datetime.today().strftime("%b, %Y")         #  Oct, 2025
 today_date = datetime.today().strftime("%d %b, %Y") #  21 Oct, 2025
 
+#==================
 #  Context for the HTML template -----
 
 # This dictionary will be passed to the template to fill in dynamic values
 context = {
-    'client_name': client_name,
-    'today_date': today_date,
-    'month': month,
-    'item1': item1,
-    'item2': item2,
-    'item3': item3,
-    'item4': item4,
-    'subtotal1': f'${subtotal1:.2f}',
-    'subtotal2': f'${subtotal2:.2f}',
-    'subtotal3': f'${subtotal3:.2f}',
-    'subtotal4': f'${subtotal4:.2f}',
-    'total': f'${total:.2f}'
+    "client_name": client_name,
+    "today_date": today_date,
+    "month": month,
+    "item1": item1,
+    "item2": item2,
+    "item3": item3,
+    "item4": item4,
+    "subtotal1": f"${subtotal1:.2f}",
+    "subtotal2": f"${subtotal2:.2f}",
+    "subtotal3": f"${subtotal3:.2f}",
+    "subtotal4": f"${subtotal4:.2f}",
+    "total": f"${total:.2f}"
           }
 
+
+#==================
 # Load HTML Template------
 
 # Set the path to the templates folder (relative to this script)
-template_path = os.path.join(os.path.dirname(__file__), '../template')
+template_path = os.path.join(os.path.dirname(__file__), "../template")
 template_loader = jinja2.FileSystemLoader(template_path)
 template_env = jinja2.Environment(loader=template_loader)
 
 # Load the specific template file
-html_template = 'contract_template.html'
+html_template = "contract_template.html"
 template = template_env.get_template(html_template)
 
 # Render the template with the context data
 output_text = template.render(context)
 
+
+#==================
 #  PDF Generation-------
 
 # Path to wkhtmltopdf executable (required by pdfkit)
@@ -84,6 +91,12 @@ if not os.path.exists(css_path):
 
 # Generate the PDF from the rendered HTML and apply CSS styling
 pdfkit.from_string(output_text, output_pdf, configuration=config, css=css_path)
+
+#==================
+# Console Feedback ------
+
+print("✅ Invoice generated successfully!")
+print(f"📄 Saved as: {os.path.basename(output_pdf)}")
 
 # === Console Feedback ===
 print("✅ Invoice generated successfully!")
