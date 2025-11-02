@@ -1,76 +1,103 @@
-<div class="page-container">&nbsp;</div>
-<div class="logo-container"><span style="background-color: #ffffff;"><img style="border-style: hidden; float: left;" src="https://copilot.microsoft.com/th/id/BCO.32768c15-a043-4a56-ada4-47aa4443a108.png" alt="Storep" width="201" height="201" /></span></div>
-<div class="logo-container">&nbsp;</div>
-<table class="invoice-info-container" style="height: 92px;" width="428">
-<tbody>
-<tr style="height: 18px;">
-<td class="client-name" style="height: 36px; width: 246.837px;" rowspan="2">{{client_name}}</td>
-<td style="height: 18px; width: 167.562px;">Storep Co</td>
-</tr>
-<tr style="height: 18px;">
-<td style="height: 18px; width: 167.562px;">12th FLAMINGO ST</td>
-</tr>
-<tr style="height: 18px;">
-<td style="height: 18px; width: 246.837px;">Invoice Date: <strong>{{today_date}}</strong></td>
-<td style="height: 18px; width: 167.562px;">Miramar FL, 33027</td>
-</tr>
-<tr style="height: 18px;">
-<td style="height: 18px; width: 246.837px;">Invoice No: 00001</td>
-<td style="height: 18px; width: 167.562px;">user@storep.com</td>
-</tr>
-</tbody>
-</table>
-<table class="line-items-container" style="width: 292px;">
-<thead>
-<tr>
-<th class="heading-quantity" style="width: 0px;">&nbsp;</th>
-<th class="heading-description" style="width: 89.75px;">Description</th>
-<th class="heading-price" style="width: 0px;">&nbsp;</th>
-<th class="heading-subtotal" style="width: 178.25px;">Subtotal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="width: 0px;">&nbsp;</td>
-<td style="width: 89.75px;">{{item1}}</td>
-<td class="right" style="width: 0px;">&nbsp;</td>
-<td class="bold" style="width: 178.25px;">{{subtotal1}}</td>
-</tr>
-<tr>
-<td style="width: 0px;">&nbsp;</td>
-<td style="width: 89.75px;">{{item2}}</td>
-<td class="right" style="width: 0px;">&nbsp;</td>
-<td class="bold" style="width: 178.25px;">{{subtotal2}}</td>
-</tr>
-<tr>
-<td style="width: 0px;">&nbsp;</td>
-<td style="width: 89.75px;">{{item3}}</td>
-<td class="right" style="width: 0px;">&nbsp;</td>
-<td class="bold" style="width: 178.25px;">{{subtotal3}}</td>
-</tr>
-</tbody>
-</table>
-<table class="line-items-container has-bottom-border" style="height: 69px; width: 409px;" width="418">
-<thead>
-<tr>
-<th style="width: 159.387px;">Payment Info</th>
-<th style="width: 92.55px;">Due By</th>
-<th style="width: 138.262px;">Total Due</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="payment-info" style="width: 159.387px;">
-<div>Account No: <strong>123567744</strong></div>
-<div>Routing No: <strong>120000547</strong></div>
-</td>
-<td class="large" style="width: 92.55px;">{{month}}</td>
-<td class="large total" style="width: 138.262px;">{{total}}</td>
-</tr>
-</tbody>
-</table>
-<div class="footer">
-<div class="footer-info">user@storep.com | 111 222 333 | storep.com</div>
-<div class="footer-info">&nbsp;</div>
-<div class="footer-thanks"><img src="https://github.com/anvilco/html-pdf-invoice-template/raw/main/img/heart.png" alt="heart" />Thank you!</div>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-container"></div>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="https://copilot.microsoft.com/th/id/BCO.32768c15-a043-4a56-ada4-47aa4443a108.png" 
+         alt="Storep" width="201" height="201">
+  </div>
+
+  <!-- Información de la factura -->
+  <table class="invoice-info-container">
+    <tbody>
+      <tr>
+        <td class="client-name" rowspan="2">{{client_name}}</td>
+        <td>Storep Co</td>
+      </tr>
+      <tr>
+        <td>12th FLAMINGO ST</td>
+      </tr>
+      <tr>
+        <td>Invoice Date: <strong>{{today_date}}</strong></td>
+        <td>Miramar FL, 33027</td>
+      </tr>
+      <tr>
+        <td>Invoice No: 00001</td>
+        <td>user@storep.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Items -->
+  <table class="line-items-container">
+    <thead>
+      <tr>
+        <th class="heading-quantity"></th>
+        <th class="heading-description">Description</th>
+        <th class="heading-price"></th>
+        <th class="heading-subtotal">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>{{item1}}</td>
+        <td class="right"></td>
+        <td class="bold">{{subtotal1}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>{{item2}}</td>
+        <td class="right"></td>
+        <td class="bold">{{subtotal2}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>{{item3}}</td>
+        <td class="right"></td>
+        <td class="bold">{{subtotal3}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Totales -->
+  <table class="line-items-container has-bottom-border">
+    <thead>
+      <tr>
+        <th>Payment Info</th>
+        <th>Due By</th>
+        <th>Total Due</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="payment-info">
+          <div>Account No: <strong>123567744</strong></div>
+          <div>Routing No: <strong>120000547</strong></div>
+        </td>
+        <td class="large">{{month}}</td>
+        <td class="large total">{{total}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-info">user@storep.com | 111 222 333 | storep.com</div>
+    <div class="footer-thanks">
+      <img src="https://github.com/anvilco/html-pdf-invoice-template/raw/main/img/heart.png" alt="heart">
+      Thank you!
+    </div>
+  </div>
+
+</body>
+</html>
+
