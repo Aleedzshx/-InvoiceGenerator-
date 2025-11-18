@@ -3,7 +3,7 @@
 
 **📌 Description**
 
-This project generates invoices in PDF format using Python, Jinja2, pdfkit, HTML/CSS, and wkhtmltopdf. It simulates virtual store billing, displaying products, subtotals, and totals with custom styling. Ideal for learning automation, dynamic templating, and applied web design.
+This project generates invoices in PDF format using Python, Jinja2, pdfkit, HTML5/CSS3, and wkhtmltopdf. It simulates virtual store billing, displaying products, subtotals, and totals with custom styling. Ideal for learning automation, dynamic templating, and applied web design.
 
 **🚀 Technologies**
 
@@ -12,11 +12,11 @@ This project generates invoices in PDF format using Python, Jinja2, pdfkit, HTML
 - PDFKit
 - wkhtmltopdf
 - HTML5 & CSS3
-- IDE
+  
 
 **📂 Project Structure**
 
--InvoiceGenerator-/
+InvoiceGenerator/
 │
 ├── invoice_generator.py       # Main Python script
 ├── contract_template.html     # HTML template with Jinja2 variables
@@ -29,16 +29,18 @@ This project generates invoices in PDF format using Python, Jinja2, pdfkit, HTML
 **🧪 How to Run**
 
 - Install dependencies:
-pip install jinja2 , pdfkit
+
+pip install jinja2 
+pip install pdfkit
 
 
 - Download from wkhtmltopdf.org
 - Verify the executable path in invoice_generator.py
 - Run the script:
-python invoice_generator.py
+python3 invoice_generator.py
 
 
-The script will generate an apending_invoice.pdf  file in the project directory.
+The script will generate a pending_invoice.pdf  file in the project directory.
 
 **🎨 Customization**
 
@@ -61,6 +63,6 @@ This educational video inspired this project, which was adapted with a unique th
 - Integrate email delivery
 - Add QR code to the invoice
 - Connect to a shopping cart or database
-- Use as a foundation for university-level projects
+
 
 Let me know if you'd like help adding a preview image.
