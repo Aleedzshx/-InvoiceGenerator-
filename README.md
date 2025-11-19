@@ -1,4 +1,4 @@
-# -InvoiceGenerator-
+# InvoiceGenerator
 
 
 **📌 Description**
@@ -21,17 +21,17 @@ InvoiceGenerator/
 ├── invoice_generator.py       # Main Python script
 ├── contract_template.html     # HTML template with Jinja2 variables
 ├── style.css                  # Custom styling for the invoice
-├── pending_invoice.pdf         # Generated invoice (output)
+├── pending_invoice.pdf         # Generated invoice (output/pdf)
 └── README.md                  # Project documentation
 
 
 
 **🧪 How to Run**
-
 - Install dependencies:
 
-pip install jinja2 
-pip install pdfkit
+--pip install jinja2 --
+
+--pip install pdfkit--
 
 
 - Download from wkhtmltopdf.org
@@ -40,7 +40,9 @@ pip install pdfkit
 python3 invoice_generator.py
 
 
-The script will generate a pending_invoice.pdf  file in the project directory.
+**print("✅ Invoice generated successfully!")**
+
+
 
 **🎨 Customization**
 
@@ -48,6 +50,7 @@ You can easily modify:
 - Product names and prices in the Python script
 - Visual design in style.css
 - Invoice layout in contract_template.html
+
 
 **📸 Preview**
 
