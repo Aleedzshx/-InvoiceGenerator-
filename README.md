@@ -33,7 +33,7 @@ InvoiceGenerator/
 - Install dependencies:
 
 --pip install jinja2 --
-
+&
 --pip install pdfkit--
 
 
@@ -68,12 +68,3 @@ You can easily modify:
 This educational video inspired this project, which was adapted with a unique theme, a custom logo, and a virtual store concept.
 
 
-
-**🧠 Next Steps**
-
-- Integrate email delivery
-- Add QR code to the invoice
-- Connect to a shopping cart or database
-
-
-Let me know if you'd like help adding a preview image.
