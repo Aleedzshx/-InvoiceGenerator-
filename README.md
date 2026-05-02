@@ -1,4 +1,4 @@
-# ENGLISH
+# SPANISH
 
 # GENERADOR DE FACTURAS
 
@@ -72,7 +72,7 @@ This educational video inspired this project, which was adapted with a unique th
 
 
 
-# SPANISH
+# ENGLISH
 
 
 # InvoiceGenerator
